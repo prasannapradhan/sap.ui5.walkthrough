@@ -1,0 +1,8 @@
+<mvc:View
+   controllerName="ui5.walkthrough.controller.App"
+   xmlns="sap.m"
+   xmlns:mvc="sap.ui.core.mvc">
+  <Button text="Say Hello" press=".onSayHelloButtonPress"/>
+  <Input value="{/recepient/name}" description="Hello {/recepient/name}" 
+    valueLiveUpdate="true" width="90%"></Input>
+</mvc:View>
