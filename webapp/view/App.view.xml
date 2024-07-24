@@ -3,6 +3,6 @@
    xmlns="sap.m"
    xmlns:mvc="sap.ui.core.mvc">
   <Button text="Say Hello" press=".onSayHelloButtonPress"/>
-  <Input value="{/recepient/name}" description="Hello {/recepient/name}" 
+  <Input value="{app>/recipient/name}" description="Hello {app>/recipient/name}" 
     valueLiveUpdate="true" width="90%"></Input>
 </mvc:View>
