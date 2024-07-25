@@ -8,8 +8,6 @@ sap.ui.define([
             const cview = this.getView();
             const dmodel = cview.getModel("app");
             const rn = dmodel.getProperty("/recipient/name");
-            const i18model = cview.getModel("i18n");
-            const rb = i18model.getResourceBundle();
             MessageToast.show(rb.getText("helloMsg", [rn]));
         }
     })
