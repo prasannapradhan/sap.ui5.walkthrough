@@ -3,7 +3,7 @@ sap.ui.define([
 	"sap/m/MessageToast"
 ], (Controller, MessageToast) => {
     "use strict";
-    return Controller.extend("ui.walkthrough.controller.App", {
+    return Controller.extend("ui5.walkthrough.controller.App", {
         onSayHelloButtonPress() {
             const cview = this.getView();
             const dmodel = cview.getModel("app");
