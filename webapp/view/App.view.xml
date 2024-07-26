@@ -1,8 +1,18 @@
 <mvc:View
    controllerName="ui5.walkthrough.controller.App"
    xmlns="sap.m"
-   xmlns:mvc="sap.ui.core.mvc">
-  <Button text="Say Hello" press=".onSayHelloButtonPress"/>
-  <Input value="{app>/recipient/name}" description="Hello {app>/recipient/name}" 
-    valueLiveUpdate="true" width="90%"></Input>
+   xmlns:mvc="sap.ui.core.mvc"
+   height="100%"
+   displayBlock="true">
+   <Shell backgroundColor="" backgroundImage="" headerRightText="" homeIcon="" logo="" title="">
+    <App class="myAppDemoWT">
+        <pages>
+            <Page title="{i18n>homePageTitle}">
+                <content>
+                  <mvc:XMLView viewName="ui5.walkthrough.view.HelloPanel"></mvc:XMLView>
+                </content>
+            </Page>
+        </pages>
+    </App>
+   </Shell>
 </mvc:View>

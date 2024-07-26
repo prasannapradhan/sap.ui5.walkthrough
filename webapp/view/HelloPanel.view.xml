@@ -1,0 +1,23 @@
+<mvc:View
+	controllerName="ui5.walkthrough.controller.HelloPanel"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m"
+	busyIndicatorDelay="0"
+>
+    <Panel headerText="{i18n>helloPanelTitle}" class="sapUIResponsiveMargin" width="auto">
+        <content>
+            <Button 
+                    text="{i18n>helloButtonText}" 
+                    press=".onSayHelloButtonPress"
+                    class="sapUISmallMarginEnd myCustomButton"/>
+
+            <Input  value="{app>/recipient/name}" 
+                    valueLiveUpdate="true" 
+                    width="60%" 
+                    class="sapUISmallMargin"/>
+                    
+            <FormattedText htmlText="Hello {app>/recipient/name}" 
+                    class="sapUiSmallMargin sapThemeHighlight-asColor myCustomText"/>
+        </content>
+    </Panel>
+</mvc:View>
