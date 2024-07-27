@@ -24,9 +24,13 @@ sap.ui.define([
             const litems = ilist.getBinding("items");
             litems.filter(fl);
         },
-        navigateDetail(){
+        navigateDetail(e){
             const rtr = this.getOwnerComponent().getRouter();
-            rtr.navTo("detail");
+            const ix = e.getSource();
+            const ipath = window.encodeURIComponent(ix.getBindingContext("invoice").getPath().substr(1));
+            rtr.navTo("detail", {
+                invoicePath: ipath
+            });
         }
      })
 });
