@@ -23,6 +23,10 @@ sap.ui.define([
             const ilist = this.byId("invoiceList");
             const litems = ilist.getBinding("items");
             litems.filter(fl);
+        },
+        navigateDetail(){
+            const rtr = this.getOwnerComponent().getRouter();
+            rtr.navTo("detail");
         }
      })
 });
