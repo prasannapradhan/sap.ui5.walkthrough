@@ -5,7 +5,7 @@ sap.ui.define([
 ], (UIComponent,
 	JSONModel) => {
 	"use strict";
-    return UIComponent.extend("ui.walkthrough.Component", {
+    return UIComponent.extend("ui5.walkthrough.Component", {
         init(){
             UIComponent.prototype.init.apply(this, arguments);
             const dm = new JSONModel({"recipient" : { "name" : "prasanna"}});
