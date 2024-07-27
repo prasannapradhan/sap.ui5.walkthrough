@@ -1,6 +1,7 @@
 sap.ui.define([
     'sap/ui/core/mvc/Controller',
-], function(Controller) {
+    'sap/ui/core/routing/History'
+], function(Controller,History) {
     'use strict';
     return Controller.extend("ui5.walkthrough.controller.Detail",{
         onInit(){
@@ -12,6 +13,16 @@ sap.ui.define([
                 path: "/" + window.decodeURIComponent(e.getParameter("arguments").invoicePath),
                 model: "invoice"
             });
+        },
+        onNavBack(e){
+            const history = History.getInstance();
+            const phash = history.getPreviousHash();
+            if(phash !== undefined){
+                window.history.go(-1);
+            }else {
+                const rtr = this.getOwnerComponent().getRouter();
+                rtr.navTo("overview", {}, true);
+            }
         }
     });
 });
