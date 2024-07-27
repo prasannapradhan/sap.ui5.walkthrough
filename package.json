@@ -4,10 +4,13 @@
   "description": "The UI5 walkthrough tutorial",
   "scripts": {
     "start": "ui5 serve -o index.html",
-    "start-mock": "ui5 serve -o test/mockServer.html"
+    "start-mock": "ui5 serve -o test/mockServer.html",
+    "build": "ui5 build --all --clean-dest",
+    "serve-dist": "ws --compress -d dist --open"
   },
   "main": "index.js",
   "devDependencies": {
+    "local-web-server": "^5.3.4",
     "ui5-middleware-simpleproxy": "^3.2.18"
   },
   "keywords": [],
