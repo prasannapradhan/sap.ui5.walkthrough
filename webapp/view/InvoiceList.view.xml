@@ -3,8 +3,14 @@
     xmlns="sap.m"
     xmlns:mvc="sap.ui.core.mvc">
     
-    <List headerText="{i18n>invoiceListTitle}" items="{invoice>/Invoices}" 
-        class="sapUIResponsiveMargin" width="auto">
+    <List items="{invoice>/Invoices}" class="sapUIResponsiveMargin" width="auto" id="invoiceList">
+        <headerToolbar>
+            <Toolbar>
+                <Title text="{i18n>invoiceListTitle}"></Title>
+                <ToolbarSpacer />
+                <SearchField width="50%" search=".onFilterInvoices" />
+            </Toolbar>
+        </headerToolbar>
         <items>
             <ObjectListItem 
                 title="{invoice>Quantity} * {invoice>ProductName}" 
